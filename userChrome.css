@@ -1,0 +1,166 @@
+:root {
+	/* colors */
+	--font-color: #ffffffff;
+	--bg-color: #000000ff;
+	--border-color-active: #ffffffff;
+	--border-color-inactive: #4e4e4eff;
+	/* properties */
+	--border-width: 1px;
+	--navbar-height: 36px;
+	--urlbar-coverage: 30vw;
+}
+
+/******************/
+/* deleting bloat */
+/******************/
+/* bottom bar */
+#contextual-feature-recommendation,
+#userContext-icos,
+#reader-mode-button,
+#picture-in-picture-button,
+#shopping-sidebar-button,
+#star-button-box,
+#urlbar-zoom-button,
+#translations-button,
+#tracking-protection-icon-container,
+#identity-box,
+#unified-extensions-button,
+#back-button,
+#forward-button,
+#reload-button,
+#stop-button,
+#stop-reload-button,
+/* upper bar */
+#alltabs-button,
+.titlebar-close,
+.tab-close-button,
+.titlebar-spacer,
+/* misc */
+#PersonalToolbar,
+#toolbar-menubar,
+.titlebar-buttonbox-container,
+#remote-control-box,
+#urlbar-search-button
+{ display: none !important; }
+/*************************/
+/* deleting bloat styles */
+/*************************/
+/* main */
+#navigator-toolbox,
+/* tabs */
+#TabsToolbar,
+.toolbar-items,
+#TabsToolbar-customization-target,
+#tabbrowser-tabs,
+#tabbrowser-arrowscrollbox,
+.tabbrowser-tab,
+#tabbrowser-arrowscrollbox,
+.tab-stack,
+.tab-background,
+.tab-content,
+.tab-icon-stack,
+.tab-label-container,
+.tab-text,
+/* url bar */
+#nav-bar,
+#nav-bar-customization-target,
+#urlbar-container,
+#urlbar,
+#urlbar-background,
+.urlbar-input-container,
+.urlbar-input-box,
+#urlbar-input,
+#PanelUI-menu-button,
+#PanelUI-button
+{ 
+	padding: 0 !important;
+	margin: 0 !important;
+	box-sizing: border-box !important;
+	border-radius: 0 !important;
+	border: none !important;
+	background-color: var(--bg-color) !important;
+	min-width: 0 !important;
+} 
+
+/******************/
+/* actual styling */
+/******************/
+/*************/
+/* main elem */
+/*************/
+#navigator-toolbox {
+	display: flex;
+	flex-flow: row nowrap;
+	height: var(--navbar-height) !important;
+	justify-content: start !important;
+}
+
+/************/
+/* tabs bar */
+/************/
+#TabsToolbar {
+	order: 2 !important;
+	width: calc(100vw - var(--urlbar-coverage)) !important;
+	justify-content: start !important;
+}
+.toolbar-items,
+#TabsToolbar-customization-target,
+#tabbrowser-tabs, 
+#tabbrowser-arrowscrollbox,
+.tabbrowser-tab,
+.tab-stack {
+	height: var(--navbar-height) !important;
+}
+
+/***********/
+/* url bar */
+/***********/
+#nav-bar {
+	order: 1 !important;
+	border-right: var(--border-width) solid var(--border-color-inactive) !important;
+	border-bottom: var(--border-width) solid var(--border-color-inactive) !important;
+	width: var(--urlbar-coverage) !important;
+}
+#urlbar-container { width: 100% !important; }
+#urlbar-input { padding-left: 8px !important; }
+
+/********/
+/* tabs */
+/********/
+.tab-content {
+	border-bottom: var(--border-width) solid var(--border-color-inactive) !important;
+	border-right: var(--border-width) solid var(--border-color-inactive) !important;
+	padding-left: 6px !important;
+	padding-right: 6px !important;
+}
+.tab-content:is([selected],[multiselected]) {
+	border-bottom: var(--border-width) solid var(--border-color-active) !important;
+	border-right: var(--border-width) solid var(--border-color-active) !important;
+	border-left: var(--border-width) solid var(--border-color-active) !important;
+}
+.tab-label-container { height: calc(var(--navbar-height) - 1px) !important; }
+
+/***************/
+/* menu button */
+/***************/
+#PanelUI-menu-button {
+	padding: 0 !important;
+	margin: 0 !important;
+	background-color: #00000000 !important;
+	z-index: 2 !important;
+}
+#PanelUI-menu-button > * {
+	opacity: 50% !important;
+	transform: scale(1.3) !important;
+	transition: ease-in-out 30ms !important;
+	background-color: #00000000 !important;
+}
+#PanelUI-menu-button:hover > * {
+	opacity: 100% !important;
+	transform: scale(1.4) !important;
+	background-color: #00000000 !important;
+}
+#PanelUI-menu-button:active > * {
+	transform: scale(1) !important;
+	background-color: #00000000 !important;
+}
