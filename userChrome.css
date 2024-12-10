@@ -11,7 +11,7 @@
 	/* tabs */
 	--img-scale: 1.13;
 	--img-active-scale: 0.85;
-	--img-transition-time: 144ms;
+	--img-transition-time: 148ms;
 	--img-pinned-scale: 1.07;
 	--img-pinned-active-scale: 0.90;
 	--img-pinned-transition-time: 149ms;
@@ -135,6 +135,10 @@
 /********/
 /* tabs */
 /********/
+.tabbrowser-tab[fadein]:not([pinned]) {
+	max-width: 100vw !important;
+	min-width: 100px !important;
+}
 .tab-content {
 	border-bottom: var(--border-width) solid var(--border-color-inactive) !important;
 	border-right: var(--border-width) solid var(--border-color-inactive) !important;
