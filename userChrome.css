@@ -69,6 +69,7 @@
 #urlbar-background,
 .urlbar-input-container,
 .urlbar-input-box,
+#urlbar-scheme,
 #urlbar-input,
 #PanelUI-menu-button,
 #PanelUI-button
@@ -138,6 +139,12 @@
 	border-right: var(--border-width) solid var(--border-color-active) !important;
 	border-left: var(--border-width) solid var(--border-color-active) !important;
 }
+.tab-icon-image {
+	transform: scale(1.1) !important;
+}
+.tab-content:is([selected],[multiselected]) > .tab-icon-stack > .tab-icon-image {
+	transform: scale(0.9) !important;
+}
 .tab-label-container { height: calc(var(--navbar-height) - 1px) !important; }
 
 /***************/
@@ -163,4 +170,19 @@
 #PanelUI-menu-button:active > * {
 	transform: scale(1) !important;
 	background-color: #00000000 !important;
+}
+
+/*******************/
+/********** popups */
+/*******************/
+/******************/
+/* tabContextMenu */
+/******************
+#tabContextMenu > * {
+	border-radius: 0 !important;
+	background-color: black !important;
+}
+#tabContextMenu > * > * {
+	border-radius: 0 !important;
+	background-color: black !important;
 }
