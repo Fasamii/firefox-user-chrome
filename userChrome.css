@@ -10,8 +10,8 @@
 	--urlbar-coverage: 30vw;
 	/* tabs */
 	--img-scale: 1.13;
-	--img-active-scale: 0.85;
-	--img-transition-time: 148ms;
+	--img-active-scale: 0.88;
+	--img-transition-time: 149ms;
 	--img-pinned-scale: 1.07;
 	--img-pinned-active-scale: 0.90;
 	--img-pinned-transition-time: 149ms;
@@ -116,6 +116,7 @@
 #tabbrowser-tabs, 
 #tabbrowser-arrowscrollbox,
 .tabbrowser-tab,
+#tabbrowser-tabs,
 .tab-stack {
 	height: var(--navbar-height) !important;
 }
@@ -152,11 +153,11 @@
 }
 .tab-icon-image {
 	transform: scale(var(--img-scale)) !important;
-	transition: ease var(--img-transition-time) !important;
+	transition: cubic-bezier(0.68, 0, 0.265, 0) var(--img-transition-time) !important;
 }
 .tab-content:is([pinned]) > .tab-icon-stack > .tab-icon-image {
 	transform: scale(var(--img-pinned-scale)) !important;
-	transition: ease var(--img-pinned-transition-time) !important;
+	transition: cubic-bezier(0.68, 0, 0.265, 0) var(--img-pinned-transition-time) !important;
 }
 
 .tab-content:is([selected],[multiselected]) > .tab-icon-stack > .tab-icon-image {
